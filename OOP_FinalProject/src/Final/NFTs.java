@@ -2,8 +2,6 @@ package Final;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class NFTs {
 	private String title;
