@@ -1,13 +1,9 @@
-package Test;
+package week4;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Final.Tweet;
-import Final.Blog;
-import Final.Collection;
-
-public class Main {
+public class Test {
 	public static void main(String[] args) {
 		List<Collection> collections = new ArrayList<>();
 	    collections.add(new Collection(100, 600));
