@@ -1,0 +1,8 @@
+- Hàm print tự thêm 1 khoảng trắng với mỗi 1 tham số mới.
+- Hàm type() kiểm tra kiểu dữ liệu của biến.
+- Chỉ có thể nối 2 chuỗi với nhau. Nếu nối 1 chuỗi với 1 số phải dùng str(29)
+- Khi nhập dữ liệu cho 1 biến từ bàn phím, kiểu dữ liệu của biến luôn là str
+- Chia lấy phần nguyên (//), chia lấy phần dư (%), mũ (**)
+- range() chính là hàm trả về một tập hợp, ví dụ: range(1, 5) sẽ trả về một tập hợp chứa các số từ 1 tới 4.
+- round(number, ndigits): number là số cần làm tròn, ndigits là số chữ số sau dấu phẩy cần làm tròn.
+- append():  thêm một phần tử vào cuối của list
