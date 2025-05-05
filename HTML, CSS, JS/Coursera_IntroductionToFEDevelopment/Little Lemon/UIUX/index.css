@@ -1,0 +1,124 @@
+.target-list-container {
+  display: flex;
+  margin: 30px 0;
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.target-list-frame {
+  margin: 50px;
+  padding: 50px 100px;
+  border-radius: 60px;
+  border: 2px solid #074979;
+}
+
+Tag:hover {
+  cursor: pointer;
+}
+
+.target-list-title {
+  display: flex;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.kpi-target-select-container {
+  margin-left: 1200px;
+  margin-top: -25px;
+}
+
+#kpi-target-title,
+#goal-list-title {
+  margin: 0 auto auto 0;
+  padding: 8px 0 0;
+  flex-shrink: 0;
+  text-align: center;
+  background-color: #074979;
+  color: #ffff;
+  width: 200px;
+  height: 30px;
+  display: block;
+  border-radius: 15px;
+}
+
+#kpi-target-title {
+  margin-left: -35px;
+}
+
+#goal-list-title {
+  margin-top: 20px;
+  width: 120px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#goal-list-title-icon {
+  margin-left: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.target-list-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px solid #074979;
+  background-color: #ffff;
+}
+
+.target-list-item {
+  align-items: center;
+}
+
+#target-goalList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#target-goalList-item {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #ffff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.target-list-content {
+  text-align: left;
+  width: 100%;
+}
+
+.target-list-content-detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.target-list-tag,
+.target-list-date {
+  text-align: right;
+  background-color: #ffff;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.target-list-icon {
+  font-size: 1.2em;
+  color: #074979;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
