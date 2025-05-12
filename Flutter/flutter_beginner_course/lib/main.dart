@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List names = ['Mitch', 'Sharon', 'Vince'];
     return MaterialApp(
       debugShowCheckedModeBanner: false, // hide Debug Banner in phone (demo)
       home: Scaffold(
@@ -22,34 +23,11 @@ class MyApp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
           ],
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // 1st box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple,
-            ),
-
-            // 2nd box
-            Expanded(
-              child: Container(
-                width: 200,
-                color: Colors.deepPurple[400],
-              ),
-            ),
-
-            // 3rd box
-            Expanded(
-              flex: 1,
-              child: Container(
-                width: 200,
-                color: Colors.deepPurple[100],
-              ),
-            ),
-          ],
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(names[index]),
+          )
         ),
       ),
     );
