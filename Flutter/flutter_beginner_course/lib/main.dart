@@ -22,30 +22,34 @@ class MyApp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
           ],
         ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              // curve the corners a bit
-              borderRadius: BorderRadius.circular(20),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // 1st box
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple,
             ),
-            padding: EdgeInsets.all(25),
-          /* child: Text(
-              "dthp",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
+
+            // 2nd box
+            Expanded(
+              child: Container(
+                width: 200,
+                color: Colors.deepPurple[400],
               ),
-            ), */
-            child: Icon(
-              Icons.favorite,
-              color: Colors.white,
-              size: 64,
             ),
-          ),
+
+            // 3rd box
+            Expanded(
+              flex: 1,
+              child: Container(
+                width: 200,
+                color: Colors.deepPurple[100],
+              ),
+            ),
+          ],
         ),
       ),
     );
