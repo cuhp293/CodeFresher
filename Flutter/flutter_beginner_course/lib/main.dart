@@ -7,6 +7,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // functions & methods
+  void userTapped() {
+    print("User tapped on function!");
+  }
+
   @override
   Widget build(BuildContext context) {
     List names = ['Mitch', 'Sharon', 'Vince'];
@@ -23,31 +28,20 @@ class MyApp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
           ],
         ),
-        body: Stack(
-          alignment: Alignment.center,
-          children: [
-            // big box
-            Container(
-              height: 300,
-              width: 300,
-              color: Colors.deepPurple,
-            ),
-
-            // medium box
-            Container(
+        body: Center(
+          child: GestureDetector(
+            /* onTap: () {
+              // do something, user tapped the container.
+              print("User tapped!");
+            }, */
+            onTap: userTapped,
+            child: Container(
               height: 200,
               width: 200,
-              color: Colors.deepPurple[400],
+              color: Colors.deepPurple,
+              child: Center(child: Text("Tap me!")),
             ),
-
-            // small box
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.deepPurple[200],
-            ),
-
-          ],
+          ),
         ),
       ),
     );
