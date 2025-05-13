@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_beginner_course/pages/second_page.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -8,19 +7,44 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("1st page")),
-      body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              // navigate to 2nd page
-              /* Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => SecondPage(),
-                  ),
-              ); */
-              Navigator.pushNamed(context, '/secondpage');
-            },
-            child: Text("Go to 2nd page!"),
+      drawer: Drawer(
+        backgroundColor: Colors.deepPurple[100],
+        child: Column(
+          children: [
+            // common to place a drawer header here: A P P  L O G O
+            DrawerHeader(
+                child: Icon(
+                  Icons.favorite,
+                  size: 48,
+                ),
+            ),
+            
+            // home page list title
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("H O M E"),
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+
+                // go to home page
+                Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+            
+            // setting page list title
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("S E T T I N G S"),
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+
+                // go to settings page
+                Navigator.pushNamed(context, '/settingspage');
+              },
+            )
+          ],
         ),
       ),
     );
