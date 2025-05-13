@@ -1,51 +1,65 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_beginner_course/pages/home_page.dart';
+import 'package:flutter_beginner_course/pages/profile_page.dart';
+import 'package:flutter_beginner_course/pages/settings_page.dart';
 
-class FirstPage extends StatelessWidget {
+class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
+
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  // this keeps track of the current page to display
+  int _selectedIndex = 0;
+
+  // this method updates the new selected index
+  void _navigateBottomBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  // the pages we have in our app
+  final List _pages = [
+    // home page
+    HomePage(),
+
+    // profile page
+    ProfilePage(),
+
+    // settings page
+    SettingsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("1st page")),
-      drawer: Drawer(
-        backgroundColor: Colors.deepPurple[100],
-        child: Column(
-          children: [
-            // common to place a drawer header here: A P P  L O G O
-            DrawerHeader(
-                child: Icon(
-                  Icons.favorite,
-                  size: 48,
-                ),
-            ),
-            
-            // home page list title
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("H O M E"),
-              onTap: () {
-                // pop drawer first
-                Navigator.pop(context);
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _navigateBottomBar,
+        items: [
+          // home
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
 
-                // go to home page
-                Navigator.pushNamed(context, '/homepage');
-              },
-            ),
-            
-            // setting page list title
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("S E T T I N G S"),
-              onTap: () {
-                // pop drawer first
-                Navigator.pop(context);
+          // profile
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
 
-                // go to settings page
-                Navigator.pushNamed(context, '/settingspage');
-              },
-            )
-          ],
-        ),
+          // settings
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
       ),
     );
   }
