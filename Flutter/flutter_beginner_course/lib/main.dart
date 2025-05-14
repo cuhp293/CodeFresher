@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     List names = ['Mitch', 'Sharon', 'Vince'];
     return MaterialApp(
       debugShowCheckedModeBanner: false, // hide Debug Banner in phone (demo)
-      home: FirstPage(),
+      home: SecondPage(),
       routes: {
         '/firstpage': (context) => FirstPage(),
         '/secondpage': (context) => SecondPage(),

@@ -1,6 +1,6 @@
 # flutter_beginner_course
 
-A new Flutter project.
+All the basics of dart and flutter.
 
 ## Getting Started
 
